@@ -31,7 +31,7 @@ def k_neighbors_model(train_features, train_labels, test_features, test_labels):
 	return knn_output, knn_accuracy, knn_roc
 
 def random_forest_model(train_features, train_labels, test_features, test_labels)
-	rf = RandomForestClassifier
+	rf = RandomForestClassifier()
 	rf.fit(train_features,train_labels)
 	rf_output = rf.predict(test_features)
 	rf_accuracy = accuracy_score(test_labels, rf_output)
